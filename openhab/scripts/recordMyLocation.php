@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$sql = "INSERT INTO CarLocations(Longitude, Latitude) VALUES ("."'".$_POST["Longitude"]."'".","."'".$_POST["Latitude"]."')";
+$sql = "INSERT INTO CarLocations(Car_ID, Longitude, Latitude) VALUES ("."'".$_POST["Car_ID"]."','".$_POST["Longitude"]."',"."'".$_POST["Latitude"]."')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
